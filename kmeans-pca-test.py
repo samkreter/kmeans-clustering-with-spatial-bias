@@ -10,20 +10,26 @@ from sklearn.datasets import load_digits
 from sklearn.decomposition import PCA
 from sklearn.preprocessing import scale
 
+import cubeFunc as cf
+
 np.random.seed(42)
 
-digits = load_digits()
+# digits = load_digits()
 
 
-data = scale(digits.data)
+# data = scale(digits.data)
 
-data = np.load("npIndian_pines.npy")
 
-n_x,n_y,n_features = data.shape
 
-n_samples = n_x * n_y
+t = np.load("npIndian_pines.npy")
+
+data = cf.ConvertDataCube(t)
+
+
+n_samples,n_features = data.shape
+
 n_digits = 16
-labels = range(16)
+labels = range(21025)
 
 sample_size = 300
 
@@ -71,6 +77,7 @@ reduced_data = PCA(n_components=2).fit_transform(data)
 kmeans = KMeans(init='k-means++', n_clusters=n_digits, n_init=10)
 kmeans.fit(reduced_data)
 
+exit()
 # Step size of the mesh. Decrease to increase the quality of the VQ.
 h = .02     # point in the mesh [x_min, m_max]x[y_min, y_max].
 
