@@ -21,9 +21,11 @@ np.random.seed(42)
 
 
 
-t = np.load("npIndian_pines.npy")
+standard = np.load("npIndian_pines.npy")
+groundTruth = np.load("npIndian_pines_gt.npy")
 
 data = cf.ConvertDataCube(t)
+
 
 
 n_samples,n_features = data.shape
