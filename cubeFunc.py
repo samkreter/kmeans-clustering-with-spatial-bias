@@ -1,4 +1,5 @@
 import numpy as np
+import math
 
 # This will convert a hyperspectral data cube into a 2D feature array.
 # The row is the data point, the columns are the features.
@@ -50,18 +51,5 @@ def RandIndex(classes,key): # Should be 1D arrays of equal length. The values in
 
 	return (a+b)/(a+b+c+d)
 
-
-
-# Testing
-# xsize = 10
-# ysize = 3
-# depth = 4
-
-# cube = np.zeros((xsize,ysize,depth))
-
-# for i in range(xsize):
-# 	for j in range(ysize):
-# 		for k in range(depth):
-# 			cube[i][j][k] = k
-
-# print(ConvertDataCube(cube))
+def EuclidDistance(features,i,j):
+	return math.sqrt( (features[i][0]-features[j][0])^2 + (features[i][1]-features[j][1])^2 )
