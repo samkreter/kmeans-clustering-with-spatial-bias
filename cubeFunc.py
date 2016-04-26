@@ -24,6 +24,17 @@ def ConvertDataCube(cube):
 
 	return features
 
+def ConvertGroundtruth(GT):
+	xsize,ysize = GT.shape
+
+	labels = np.ones(xsize*ysize)
+
+	for i in range(xsize):
+		for j in range(ysize):
+			labels[i*ysize + j] = GT[i][j]
+
+	return labels
+
 def RandIndex(classes,key): # Should be 1D arrays of equal length. The values in the array should be classes
 
 	# https://en.wikipedia.org/wiki/Rand_index
@@ -53,3 +64,21 @@ def RandIndex(classes,key): # Should be 1D arrays of equal length. The values in
 
 def EuclidDistance(features,i,j):
 	return math.sqrt( (features[i][0]-features[j][0])^2 + (features[i][1]-features[j][1])^2 )
+
+def NormalizeSpectra(features):
+
+	numSamples, numFeatures = features.shape
+
+	for i in range(numSamples):
+		area = 0
+		for j in range(2,numFeatures):
+			area += features[i][j]
+
+		for j in range(2,numFeatures):
+			features[i][j] /= area
+
+	return features
+
+
+
+
