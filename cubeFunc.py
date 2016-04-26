@@ -1,6 +1,6 @@
 import numpy as np
 
-# This will convert a hyperspectral data cube into a 2D feature array. 
+# This will convert a hyperspectral data cube into a 2D feature array.
 # The row is the data point, the columns are the features.
 # The first 2 features are the x and y position
 # The rest of the features are the spectral components
@@ -22,6 +22,35 @@ def ConvertDataCube(cube):
 				features[i*ysize + j][k] = cube[i][j][k-2]
 
 	return features
+
+def RandIndex(classes,key): # Should be 1D arrays of equal length. The values in the array should be classes
+
+	# https://en.wikipedia.org/wiki/Rand_index
+
+	samples=len(classes)
+	a=0
+	b=0
+	c=0
+	d=0
+
+	# Go through all pairs of data points
+	for i in range(samples):
+		for j in range(i,samples):
+
+			if(classes[i] == classes[j]):
+				if(key[i] == key[j] ):
+					a += 1
+				else:
+					c += 1
+			else:
+				if(key[i] == key[j] ):
+					d += 1
+				else:
+					b += 1
+
+	return (a+b)/(a+b+c+d)
+
+
 
 # Testing
 # xsize = 10
