@@ -279,6 +279,13 @@ def NeighborBias(sqrmap,maxClasses,radius):
 
 	return newMap
 
+def scaleBands(data):
+	data[:,2:] /= 1000
+	data[:,[167, 167]] *= 2000
+	data[: , [0, 1]] *= 2 
+	# data[:, [50, 110]] += 0
+	return data
+
 #####################################################
 		# DO IT
 #####################################################
@@ -302,22 +309,23 @@ dataSpectral = np.ones((samps,features-2))
 dataSpectral[:,:] = data[:,2:]
 
 # Data Scaling
-data[2:] *= spectralScale
+data = scaleBands(data)
+# data[2:] *= spectralScale
 
 # Load Ground Truth
 gt = np.load("npIndian_pines_gt.npy")
 key = ConvertGroundtruth(gt)
 
 # PCA Dimensionality Reduction
-print("Doing PCA..")
-pca = PCA(n_components=PCAcomps,whiten=whitening)
-#dataPCA = pca.fit_transform(data)
-dataPCA = pca.fit_transform(dataSpectral)
+# print("Doing PCA..")
+# pca = PCA(n_components=PCAcomps,whiten=whitening)
+# #dataPCA = pca.fit_transform(data)
+# dataPCA = pca.fit_transform(dataSpectral)
 
 # PCA Stats
-numSamps,numFeatures = dataPCA.shape
-print(pca.explained_variance_ratio_) 
-print(pca.components_)
+# numSamps,numFeatures = dataPCA.shape
+# print(pca.explained_variance_ratio_) 
+# print(pca.components_)
 
 # Look at PCA Components
 # comp = pca.components_[0,:]
@@ -328,10 +336,10 @@ print(pca.components_)
 # input()
 
 # K Means
-# print("K-Meansing..")
-# k_means = KMeans(n_clusters=17)
-# k_means.fit(dataPCA)
-# labels = k_means.labels_
+print("K-Meansing..")
+k_means = KMeans(n_clusters=17)
+k_means.fit(data)
+labels = k_means.labels_
 
 # Spectral Clustering (rbf) DONT DO IT TAKES TOO LONG AND CRASHES
 # print("Doing Spectral Clustering..")
@@ -340,19 +348,19 @@ print(pca.components_)
 # labels = spectral.labels_
 
 # DBSCAN
-print("Doing DBSCAN..")
-DB = cluster.DBSCAN(eps=DB_eps,min_samples=numClasses)#,metric=WeightedAffinity)
-DB.fit(dataPCA)
-labels = DB.labels_ 
+# print("Doing DBSCAN..")
+# DB = cluster.DBSCAN(eps=DB_eps,min_samples=numClasses)#,metric=WeightedAffinity)
+# DB.fit(dataPCA)
+# labels = DB.labels_ 
 
 # Neighborhood Biasing
 evo0 = ConvertLabels(labels)
-evo1 = NeighborBias(evo0,numClasses,1)
-labels = ConvertGroundtruth(evo1)
+# evo1 = NeighborBias(evo0,numClasses,1)
+# labels = ConvertGroundtruth(evo1)
 
 # Rand Index
 print("Calculating Rand Index..")
-#print(RandIndex(labels,key))
+print(RandIndex(labels,key))
 print(adjusted_rand_score(labels,key))
 
 # Visualize Ground Truth Prediction
@@ -365,9 +373,9 @@ fig2 = plt.figure()
 plt.imshow(evo0)
 plt.show()
 
-fig3 = plt.figure()
-plt.imshow(evo1)
-plt.show()
+# fig3 = plt.figure()
+# plt.imshow(evo1)
+# plt.show()
 
 
 #Testing stuff
@@ -398,7 +406,7 @@ input()
 # reflim = plt.figure()
 # plt.imshow(refl)
 
-#View(cube,gt)
+# View(cube,gt)
 
 
 
