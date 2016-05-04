@@ -272,10 +272,10 @@ def NeighborBias(sqrmap,maxClasses,radius):
 							break
 
 			newMap[i][j] = neighborsClasses[neighborsHist.argmax()]
-			print(neighborsClasses)
-			print(neighborsHist)
-			print(newMap[i][j])
-			print()
+			# print(neighborsClasses)
+			# print(neighborsHist)
+			# print(newMap[i][j])
+			# print()
 
 	return newMap
 
@@ -285,7 +285,7 @@ def NeighborBias(sqrmap,maxClasses,radius):
 
 # PARAMETERS
 spectralScale = 1/1000
-PCAcomps = 20
+PCAcomps = 10
 numClasses = 12
 DB_eps = 0.7
 whitening = True
@@ -295,6 +295,11 @@ print("Loading Data..")
 cube = np.load("npIndian_pines.npy")
 #data = ConvertDataCube(cube)
 data = np.load("data.npy")
+
+# Also play with data only containing spectral info
+samps,features = data.shape
+dataSpectral = np.ones((samps,features-2))
+dataSpectral[:,:] = data[:,2:]
 
 # Data Scaling
 data[2:] *= spectralScale
@@ -306,7 +311,8 @@ key = ConvertGroundtruth(gt)
 # PCA Dimensionality Reduction
 print("Doing PCA..")
 pca = PCA(n_components=PCAcomps,whiten=whitening)
-dataPCA = pca.fit_transform(data)
+#dataPCA = pca.fit_transform(data)
+dataPCA = pca.fit_transform(dataSpectral)
 
 # PCA Stats
 numSamps,numFeatures = dataPCA.shape
@@ -314,7 +320,7 @@ print(pca.explained_variance_ratio_)
 print(pca.components_)
 
 # Look at PCA Components
-# comp = pca.components_[2,:]
+# comp = pca.components_[0,:]
 # plt.figure()
 # plt.ion()
 # plt.plot(comp)
