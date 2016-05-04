@@ -8,6 +8,8 @@ from sklearn.cluster import KMeans
 from sklearn.metrics.cluster import adjusted_rand_score
 from sklearn import cluster
 
+from fuzzyKMeans import FuzzyKMeans
+
 # This will convert a hyperspectral data cube into a 2D feature array.
 # The row is the data point, the columns are the features.
 # The first 2 features are the x and y position
@@ -332,6 +334,12 @@ print(pca.components_)
 # spectral = cluster.SpectralClustering(n_clusters=17)
 # spectral.fit(dataPCA)
 # labels = spectral.labels_
+
+# Fuzzy K Means
+# print("Fuzzy K-Meansing..")
+# fuzzy_kmeans = FuzzyKMeans(k=17, m=2)
+# fuzzy_kmeans.fit(dataPCA)
+# labels = fuzzy_kmeans.labels_
 
 # DBSCAN
 print("Doing DBSCAN..")
