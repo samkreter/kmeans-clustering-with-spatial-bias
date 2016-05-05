@@ -4,23 +4,14 @@ Testing
 ##Dependencies
 
 1. python 3.5
-
     - https://www.python.org/downloads/release/python-350/
-
 2. NumPy
-
     - http://www.numpy.org/
-
 3. SciPy
-
     - https://www.scipy.org/
-
 4. Matplotlib
-
     - https://matplotlib.org/
-
 5. Scikit-learn
-
     - https://scikit-learn.org/
 
 ##Running
