@@ -8,6 +8,7 @@ from sklearn.cluster import KMeans
 from sklearn.metrics.cluster import adjusted_rand_score
 from sklearn import cluster
 
+
 # This will convert a hyperspectral data cube into a 2D feature array.
 # The row is the data point, the columns are the features.
 # The first 2 features are the x and y position
@@ -91,7 +92,7 @@ def SpatialDistanceEuclidean(data,i,j):
 	return math.sqrt( (data[i][0]-data[j][0])**2 + (data[i][1]-data[j][1])**2 )
 
 def SpatialDistanceL2(data,i,j):
-	return (data[i][0]-data[j][0])**2 + (data[i][1]-data[j][1])**2 
+	return (data[i][0]-data[j][0])**2 + (data[i][1]-data[j][1])**2
 
 # Area normalizes the spectra such that the spectra of each data points integrates to 1
 def NormalizeSpectra(data):
@@ -249,6 +250,7 @@ def NeighborBias(sqrmap,maxClasses,radius):
 	newMap = np.zeros((xsize,ysize))
 
 	neighborsClasses = np.zeros(maxClasses)
+	neighborsClasses.fill(-10)
 	neighborsHist = np.zeros(maxClasses)
 
 	for i in range(xsize):
@@ -261,12 +263,12 @@ def NeighborBias(sqrmap,maxClasses,radius):
 
 					if(ii<0 or ii>=xsize or jj<0 or jj>=ysize):
 						continue
-					
+
 					for k in range(maxClasses):
-						if(neighborsClasses[k]==sqrmap[ii][jj]):
+						if(neighborsClasses[k] == sqrmap[ii][jj]):
 							neighborsHist[k]+=1
 							break
-						elif(k!=0 and neighborsClasses[k]==0):
+						elif(neighborsClasses[k] == -10):
 							neighborsClasses[k] = sqrmap[ii][jj]
 							neighborsHist[k]+=1
 							break
@@ -281,10 +283,40 @@ def NeighborBias(sqrmap,maxClasses,radius):
 
 def scaleBands(data):
 	data[:,2:] /= 1000
-	data[:,[167, 167]] *= 2000
+	data[:,167] *= 2000
+<<<<<<< HEAD
 	data[: , [0, 1]] *= 2 
+=======
+	data[: , [0, 1]] *= 2
+	#data[:,200] *= 100
+	data[:,120] *= 100
+	data[:,57] *= 100
+
+
+>>>>>>> 613f30e8e060926f56c314378d588314ca1f0221
 	# data[:, [50, 110]] += 0
+	data[:,120] *= 100
+	data[:,57] *= 100
 	return data
+
+##Best implementation of the Kmeans
+def kMeansMaxSpectralWeight():
+	cube = np.load("npIndian_pines.npy")
+	#data = ConvertDataCube(cube)
+	data = np.load("data.npy")
+	data = scaleBands(data)
+
+	gt = np.load("npIndian_pines_gt.npy")
+	key = ConvertGroundtruth(gt)
+
+	print("K-Meansing..")
+	k_means = KMeans(n_clusters=17,random_state=1)
+	k_means.fit(data)
+	labels = k_means.labels_
+
+	print("Calculating Rand Index..")
+	print(RandIndex(labels,key))
+	print(adjusted_rand_score(labels,key))
 
 #####################################################
 		# DO IT
@@ -293,7 +325,7 @@ def scaleBands(data):
 # PARAMETERS
 spectralScale = 1/1000
 PCAcomps = 10
-numClasses = 12
+numClasses = 17
 DB_eps = 0.7
 whitening = True
 
@@ -324,7 +356,7 @@ key = ConvertGroundtruth(gt)
 
 # PCA Stats
 # numSamps,numFeatures = dataPCA.shape
-# print(pca.explained_variance_ratio_) 
+# print(pca.explained_variance_ratio_)
 # print(pca.components_)
 
 # Look at PCA Components
@@ -337,7 +369,11 @@ key = ConvertGroundtruth(gt)
 
 # K Means
 print("K-Meansing..")
-k_means = KMeans(n_clusters=17)
+<<<<<<< HEAD
+k_means = KMeans(n_clusters=numClasses,random_state=1)
+=======
+k_means = KMeans(n_clusters=17,random_state=1)
+>>>>>>> 613f30e8e060926f56c314378d588314ca1f0221
 k_means.fit(data)
 labels = k_means.labels_
 
@@ -351,12 +387,21 @@ labels = k_means.labels_
 # print("Doing DBSCAN..")
 # DB = cluster.DBSCAN(eps=DB_eps,min_samples=numClasses)#,metric=WeightedAffinity)
 # DB.fit(dataPCA)
-# labels = DB.labels_ 
+# labels = DB.labels_
 
 # Neighborhood Biasing
+print("Doing Neighborhood Biasing..")
 evo0 = ConvertLabels(labels)
-# evo1 = NeighborBias(evo0,numClasses,1)
-# labels = ConvertGroundtruth(evo1)
+evo1 = NeighborBias(evo0,numClasses,1)
+
+i=0
+for i in range(10):
+	evo2 = NeighborBias(evo1,numClasses,1)
+	if np.array_equal(evo1,evo2):
+		print("Converged!")
+	evo1 = evo2
+
+labels = ConvertGroundtruth(evo2)
 
 # Rand Index
 print("Calculating Rand Index..")
@@ -373,9 +418,9 @@ fig2 = plt.figure()
 plt.imshow(evo0)
 plt.show()
 
-# fig3 = plt.figure()
-# plt.imshow(evo1)
-# plt.show()
+fig3 = plt.figure()
+plt.imshow(evo1)
+plt.show()
 
 
 #Testing stuff
