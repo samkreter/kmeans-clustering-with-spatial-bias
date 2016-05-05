@@ -22,11 +22,11 @@
 \maketitle
 
 \begin{abstract}
-Handwriting recognition allows for handwritten documents to be stored in electronic form. Some benefits of having documents in electronic form include the reduction of space needed to store the documents and the ability to process the handwritten data within these documents. This paper proposes a method for processing the handwritten data using support vector machines (SVMs). The implementation uses 2-class classification SVMs with a multiclass method to provide a robust method for classifying handwritten characters.
+Here we present an approach to unsupervised clustering of hyperspectral imaging data, specifically the Indian Pines data set. A baseline approach of simple k-means on the raw hyperspectral data is used to compare successive iterations of our final approach, which utilizes a high level dimensionality reduction via band selection, feature weighting, and k-means clustering combined with a spatial biasing algorithm. The final algorithm achieved a Rand index of 88.6\% when compared to the Indian Pines ground truth. A major conclusion that can be drawn from the study is that commonly used methods in dimensionality reduction and unsupervised clustering, like principal component analysis and density-based spatial clustering of applications with noise, are not always necessary for robust clustering, and in this case performed poorly compared to our simpler approach.
 \end{abstract}
 
 \begin{IEEEkeywords}
-    Principal Component Analysis, k-Means, Normalization, Whitening, Spectral Imaging.
+    Principal Component Analysis (PCA), k-Means, Normalization, Whitening, Spectral Imaging.
 \end{IEEEkeywords}
 
 \IEEEpeerreviewmaketitle
@@ -39,17 +39,15 @@ The Indian Pines [reference] dataset used in our research consisted of two-hundr
 
 %\hfill mds
 
-%\hfill August 26, 2015
+%\hfill August 26, 20154
 
 \section{Implementation}
   \subsection{K-Means \& PCA Implementation}
-    In order to efficiently implement the different algorithms necessary to solve this unsupervised clustering problem, we decided to use a popular python machine learning library, scikit-learn reference.\\
+    In order to efficiently implement a variety of candidate algorithms for this unsupervised clustering problem, we decided to use the popular python machine learning library scikit-learn \cite{ScikitLearnAPI}.\\
 
-    We first decided to implement the K-Means algorithm. The problem seemed to fit nicely into a K-Means problem since we knew in advance how many data clusters (fields) existed, which is an important initialization parameter for the algorithm. We used the scikit-learn's K-Means reference  implementation because it allows for a good amount of fine tuning through its many parameter options.\\
+    We first decided to implement the k-Means algorithm as a baseline test. Given that we knew in advance the number of classes we needed to find, the task naively lent itself nicely to a k-means clustering approach. We used the scikit-learn's k-Means \cite{ScikitLearnAPI} implementation because it allows for a good amount of fine tuning through its many parameter options.\\
 
-    We next looked into dimensionality reduction. The initial dataset is 145x145 pixels in size with 220 spectral layers for each pixel. We again used scikit-learn to implement Principal Component Analysis, or PCA. This implementation also allows for whitening, which can be used as another parameter during the experiments to find the best method.\\
-
-    In order to gain a better understanding of the data, we developed a simple tool using python and matplotlib to visualize each layer of the spectral data. Figure \ref{fig:Viewer} shows the simple interface.  After selecting an X, Y spatial position and a spectral layer number, the top graph shows the relationship between the currently selected pixel’s spectral data (in blue) and the previously visited pixel’s data (in red). The bottom-right graph shows the visual representation of the specified spectral layer. This allows us to easily see each layer’s impact on the final clustering of the data. The bottom-left graph shows the final ground truth of the dataset for reference, along with a black point indicating the current X, Y position.\\
+    We next looked into dimensionality reduction options. The initial dataset is 145x145 pixels in size with 220 spectral layers for each pixel. We again used scikit-learn to implement Principal Component Analysis, or PCA. This implementation also allows for whitening to normalize, which can be used as another parameter during the experiments to find the best method.\\
 
     \begin{figure}[h!]
       \centering\includegraphics[width=\columnwidth]{images/tool.png}
@@ -57,16 +55,19 @@ The Indian Pines [reference] dataset used in our research consisted of two-hundr
       \label{fig:Viewer}
     \end{figure}
 
+    In order to gain a better understanding of the data, we developed a simple tool using python and matplotlib to visualize each layer of the spectral data. Figure \ref{fig:Viewer} shows the simple interface. After selecting an X, Y spatial position and a spectral layer number, the top graph shows the relationship between the currently selected pixel’s spectral data (in blue) and the previously visited pixel’s data (in red). The bottom-right graph shows the visual representation of the specified spectral layer. This allows us to easily see each layer’s impact on the final clustering of the data. The bottom-left graph shows the final ground truth of the dataset for reference, along with a black point indicating the current X, Y position.\\
+
     Using this tool, we were able to create a normalization function to weight the more distinctive spectral layers more heavily, as shown in Figure \ref{fig:GoodLayer}, while assigning a smaller weight to the less indicative layers such as shown in Figure \ref{fig:BadLayer}.\\
 
+
     \begin{figure}[h!]
-      \centering\includegraphics[width=\columnwidth]{images/allStarSpec.png}
+      \centering\includegraphics[width=6cm]{images/allStarSpec.png}
       \caption{Useful Spectral Layer}
       \label{fig:GoodLayer}
     \end{figure}
 
     \begin{figure}[h!]
-      \centering\includegraphics[width=\columnwidth]{images/horribleSpec.png}
+      \centering\includegraphics[width=6cm]{images/horribleSpec.png}
       \caption{Useless Spectral Layer}
       \label{fig:BadLayer}
     \end{figure}
@@ -74,7 +75,7 @@ The Indian Pines [reference] dataset used in our research consisted of two-hundr
     After applying normalization on the spectral layers, we experimented with giving a pixel’s spatial coordinates greater impact in the final clusterings. Because the initial data processing converted the data cube into a set of feature vectors, spatial information was lost. To fix this, we append the X and Y position onto the spectral feature vector and factored the X and Y weights into the normalization.\\
 
   \subsection{Neighborhood Implementation}
-    Another look at the data revealed that neighboring pixels are very often in the same class; it seems intuitive that spatially close areas have similar spectral signatures.  This observation can be used to enforce a bias on any proposed clustering provided by K-means or any other clustering algorithm. The neighborhood biasing algorithm we created iterates through each pixel, surveying its neighbors within a defined spatial radius, and finds the mode of the classes found.  If a certain class is found to be very predominant in the immediate spatial neighborhood, the class of the current pixel is changed to that class.  The algorithm is iterative and can be run as many times as desired until convergence.  The result of the neighborhood bias algorithm is the removal of spectral outliers in otherwise well-defined clusters and an overall smoothing of the output provided by some clustering algorithms. This approach can be beneficial if there are many spectrally noisy outliers, but could also be bad if there are small clusters that could be smoothed over by the algorithm. The radius of the polling neighborhood and the number iterations can control the level of smoothing. In our case, we generally used a small radius of 2 pixels and 10 iterations of the algorithm.\\
+    Observation of the data revealed that neighboring pixels are very often in the same class; it seems intuitive that spatially close areas have similar spectral signatures.  This observation can be used to enforce a bias on any proposed clustering provided by k-means or any other clustering algorithm. The neighborhood biasing algorithm we created iterated through each pixel, surveying its neighbors within a defined spatial radius, and found the mode of the classes found. If a certain class was found to be very predominant in the immediate spatial neighborhood, the class of the current pixel was changed to that class. The algorithm is iterative and can be run as many times as desired until convergence. The goal of the neighborhood bias algorithm was the removal of spectral outliers in otherwise well-defined clusters and an overall smoothing of the output provided by some clustering algorithms. This approach can be beneficial if there are many spectrally noisy outliers, but could also be bad if there are small clusters that could be smoothed over by the algorithm. The radius of the polling neighborhood and the number iterations can control the level of smoothing. In our case, we generally used a small radius of 2 pixels and 10 iterations of the algorithm.\\
 
     \begin{figure}[h!]
       \centering\includegraphics[width=\columnwidth]{images/BandUnB.png}
@@ -109,17 +110,20 @@ The Indian Pines [reference] dataset used in our research consisted of two-hundr
 
 \begin{thebibliography}{1}
 
+\bibitem{AWS}
+  Amazon. \emph{Amazon Web Services.} https://aws.amazon.com/. N.p., 2016. Web. 4 May 2016.
+
 \bibitem{BishopBook}
   Bishop, Christopher M. \emph{Pattern Recognition And Machine Learning.} New York: Springer, 2006. Print.
 
-\bibitem{DataMining}
-  Zhang, Hantao. \emph{Unsupervised Learning.} http://homepage.cs.uiowa.edu/\~hzhang/c145/notes/chap18b.pdf. N.p., 2016. Web. 4 May 2016.
-
-\bibitem{FraudAnalysis}
-  Francis, Louise. \emph{Applications of Unsupervised Learning in Property and Casualty Insurance with Emphasis on Fraud Analysis} http://www.slideshare.net/salfordsystems/final-applications-of-unsupervised-learning-in-pc. N.p., 2012. Web. 4 May 2016.
+\bibitem{Blondel}
+  Blondel, Mathieu. \emph{Fuzzy K-means and K-medians.} https://gist.github.com/mblondel/1451300. N.p., 2011. Web. 4 May 2016.
 
 \bibitem{ScikitLearnAPI}
   Buitinck et al., \emph{API design for machine learning software: experiences from the scikit-learn project.} ECML PKDD Workshop, pp. 108-122, 2013.
+
+\bibitem{FraudAnalysis}
+  Francis, Louise. \emph{Applications of Unsupervised Learning in Property and Casualty Insurance with Emphasis on Fraud Analysis} http://www.slideshare.net/salfordsystems/final-applications-of-unsupervised-learning-in-pc. N.p., 2012. Web. 4 May 2016.
 
 \bibitem{ClusterTutorial}
   Matteo, Matteucci. \emph{A Tutorial on Clustering Algorithms.} http://home.deib.polimi.it/matteucc/Clustering/tutorial\_html/. N.p., 2016. Web. 4 May 2016.
@@ -127,11 +131,8 @@ The Indian Pines [reference] dataset used in our research consisted of two-hundr
 \bibitem{IndianPines}
   Purdue Research Foundation. \emph{Hyperspectral Remote Sensing Scenes.} http://www.ehu.eus/ccwintco/index.php?title=Hyperspectral \_Remote\_Sensing\_Scenes. N.p., 2016. Web. 4 May 2016.
 
-\bibitem{AWS}
-  Amazon. \emph{Amazon Web Services.} https://aws.amazon.com/. N.p., 2016. Web. 4 May 2016.
-
-\bibitem{Blondel}
-  Blondel, Mathieu. \emph{Fuzzy K-means and K-medians.} https://gist.github.com/mblondel/1451300. N.p., 2011. Web. 4 May 2016.
+\bibitem{DataMining}
+  Zhang, Hantao. \emph{Unsupervised Learning.} http://homepage.cs.uiowa.edu/\~hzhang/c145/notes/chap18b.pdf. N.p., 2016. Web. 4 May 2016.
 
 \end{thebibliography}
 
