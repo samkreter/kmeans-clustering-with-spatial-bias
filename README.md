@@ -27,3 +27,4 @@ The ouput will
 2. The Rand and Adjusted Rand index
 
 3. A graph with the ground truth and the clusterd labels
+`
