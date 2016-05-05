@@ -292,6 +292,25 @@ def scaleBands(data):
 	# data[:, [50, 110]] += 0
 	return data
 
+##Best implementation of the Kmeans
+def kMeansMaxSpectralWeight():
+	cube = np.load("npIndian_pines.npy")
+	#data = ConvertDataCube(cube)
+	data = np.load("data.npy")
+	data = scaleBands(data)
+
+	gt = np.load("npIndian_pines_gt.npy")
+	key = ConvertGroundtruth(gt)
+
+	print("K-Meansing..")
+	k_means = KMeans(n_clusters=17,random_state=1)
+	k_means.fit(data)
+	labels = k_means.labels_
+
+	print("Calculating Rand Index..")
+	print(RandIndex(labels,key))
+	print(adjusted_rand_score(labels,key))
+
 #####################################################
 		# DO IT
 #####################################################
