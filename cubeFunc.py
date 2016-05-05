@@ -250,6 +250,7 @@ def NeighborBias(sqrmap,maxClasses,radius):
 	newMap = np.zeros((xsize,ysize))
 
 	neighborsClasses = np.zeros(maxClasses)
+	neighborsClasses.fill(-10)
 	neighborsHist = np.zeros(maxClasses)
 
 	for i in range(xsize):
@@ -264,10 +265,10 @@ def NeighborBias(sqrmap,maxClasses,radius):
 						continue
 
 					for k in range(maxClasses):
-						if(neighborsClasses[k]==sqrmap[ii][jj]):
+						if(neighborsClasses[k] == sqrmap[ii][jj]):
 							neighborsHist[k]+=1
 							break
-						elif(k!=0 and neighborsClasses[k]==0):
+						elif(neighborsClasses[k] == -10):
 							neighborsClasses[k] = sqrmap[ii][jj]
 							neighborsHist[k]+=1
 							break
@@ -283,13 +284,19 @@ def NeighborBias(sqrmap,maxClasses,radius):
 def scaleBands(data):
 	data[:,2:] /= 1000
 	data[:,167] *= 2000
+<<<<<<< HEAD
+	data[: , [0, 1]] *= 2 
+=======
 	data[: , [0, 1]] *= 2
 	#data[:,200] *= 100
 	data[:,120] *= 100
 	data[:,57] *= 100
 
 
+>>>>>>> 613f30e8e060926f56c314378d588314ca1f0221
 	# data[:, [50, 110]] += 0
+	data[:,120] *= 100
+	data[:,57] *= 100
 	return data
 
 ##Best implementation of the Kmeans
@@ -318,7 +325,7 @@ def kMeansMaxSpectralWeight():
 # PARAMETERS
 spectralScale = 1/1000
 PCAcomps = 10
-numClasses = 12
+numClasses = 17
 DB_eps = 0.7
 whitening = True
 
@@ -362,7 +369,11 @@ key = ConvertGroundtruth(gt)
 
 # K Means
 print("K-Meansing..")
+<<<<<<< HEAD
+k_means = KMeans(n_clusters=numClasses,random_state=1)
+=======
 k_means = KMeans(n_clusters=17,random_state=1)
+>>>>>>> 613f30e8e060926f56c314378d588314ca1f0221
 k_means.fit(data)
 labels = k_means.labels_
 
@@ -379,9 +390,18 @@ labels = k_means.labels_
 # labels = DB.labels_
 
 # Neighborhood Biasing
+print("Doing Neighborhood Biasing..")
 evo0 = ConvertLabels(labels)
-# evo1 = NeighborBias(evo0,numClasses,1)
-# labels = ConvertGroundtruth(evo1)
+evo1 = NeighborBias(evo0,numClasses,1)
+
+i=0
+for i in range(10):
+	evo2 = NeighborBias(evo1,numClasses,1)
+	if np.array_equal(evo1,evo2):
+		print("Converged!")
+	evo1 = evo2
+
+labels = ConvertGroundtruth(evo2)
 
 # Rand Index
 print("Calculating Rand Index..")
@@ -398,9 +418,9 @@ fig2 = plt.figure()
 plt.imshow(evo0)
 plt.show()
 
-# fig3 = plt.figure()
-# plt.imshow(evo1)
-# plt.show()
+fig3 = plt.figure()
+plt.imshow(evo1)
+plt.show()
 
 
 #Testing stuff
