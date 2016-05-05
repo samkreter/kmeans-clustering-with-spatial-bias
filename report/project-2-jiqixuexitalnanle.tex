@@ -42,15 +42,13 @@ The Indian Pines \cite{IndianPines} data set used in our research consisted of t
 %\hfill August 26, 20154
 
 \subsection{Literature Review}
-When clustering hyperspectral imaging data it is often necessary to implement some sort of dimensionality reduction; in many cases it has been found that simple methods such as band selection can lead to robust clusterings without the overhead of high dimensional feature spaces \cite{PCADimensionReduction}. These results motivate our implementation of specific band selection and weighting as an alternative to PCA.\\
-
-Additionally, the incorporation of spatial data with the spectral signatures has been shown to provide valuable information when it comes to unsupervised clustering \cite{SpectralSpatial}. Given the demonstrated success that others have had incorporating spatial data in a variety of applications, we chose to implement the spatial data via our own spatial biasing algorithm and in the feature vectors themselves.\\
+When clustering hyperspectral imaging data it is often necessary to implement some sort of dimensionality reduction; in many cases it has been found that simple methods such as band selection can lead to robust clusterings without the overhead of high dimensional feature spaces \cite{PCADimensionReduction}. These results motivate our implementation of specific band selection and weighting as an alternative to popular principal component analysis.Additionally, the incorporation of spatial data in addition to the spectral signatures has been shown to provide valuable information when it comes to unsupervised clustering \cite{SpectralSpatial}. Given the demonstrated success that others have had incorporating spatial data in a variety of applications, we chose to implement the spatial data via our own spatial biasing algorithm and in the feature vectors themselves.\\
 
 \section{Implementation}
   \subsection{K-Means \& PCA Implementation}
     In order to efficiently implement a variety of candidate algorithms for this unsupervised clustering problem, we decided to use the popular python machine learning library scikit-learn \cite{ScikitLearnAPI}.\\
 
-    We first decided to implement the k-Means algorithm as a baseline test. Given that we knew in advance the number of classes we needed to find, the task naively lent itself nicely to a k-Means clustering approach. We used the scikit-learn's k-Means \cite{ScikitLearnAPI} implementation because it allows for a good amount of fine tuning through its many parameter options.\\
+    We first decided to implement the k-Means algorithm as a baseline test. Given that we knew in advance the number of classes we needed to find, the task naively lent itself nicely to a k-Means clustering approach. We used the scikit-learn's k-Means \cite{ScikitLearnAPI} implementation because it allows for a good amount of fine tuning through its many parameter options. We additionally employed scikit-learns density-based spatial clustering of applications with noise (DBSCAN) clustering method for comparison.\\
 
     We additionally looked into dimensionality reduction options. The initial dataset is 145x145 pixels in size with 220 spectral layers for each pixel. We again used scikit-learn to implement Principal Component Analysis, or PCA. This implementation also allows for whitening, which normalizes feature variances, which can be used as another parameter during the experiments to find the best method. This method was also compared to non-dimensionality reduced analysis in which each band was given its own weight.\\
 

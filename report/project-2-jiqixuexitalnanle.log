@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.1.21)  5 MAY 2016 10:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.1.21)  5 MAY 2016 10:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -279,23 +279,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 45--46
  []
 
 
-Underfull \hbox (badness 1509) in paragraph at lines 47--48
-\OT1/ptm/m/n/10 spec-tral sig-na-tures has been shown to pro-vide valu-able
- []
-
-
-Underfull \hbox (badness 4084) in paragraph at lines 47--48
-\OT1/ptm/m/n/10 in-for-ma-tion when it comes to un-su-per-vised clus-ter-ing
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 47--48
-
- []
-
-
-Underfull \hbox (badness 1540) in paragraph at lines 51--52
+Underfull \hbox (badness 1540) in paragraph at lines 49--50
 \OT1/ptm/m/n/10 al-go-rithms for this un-su-per-vised clus-ter-ing prob-lem, we
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--50
 
  []
 
@@ -305,25 +295,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 51--52
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 53--54
-
- []
-
-
-Underfull \hbox (badness 3168) in paragraph at lines 55--56
+Underfull \hbox (badness 3168) in paragraph at lines 53--54
 []\OT1/ptm/m/n/10 We ad-di-tion-ally looked into di-men-sion-al-ity re-duc-tion
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--56
+Underfull \hbox (badness 10000) in paragraph at lines 53--54
 
  []
 
 <images/tool.png, id=1, 1106.1325pt x 724.7075pt>
 File: images/tool.png Graphic file (type png)
  <use images/tool.png>
-Package pdftex.def Info: images/tool.png used on input line 58.
+Package pdftex.def Info: images/tool.png used on input line 56.
 (pdftex.def)             Requested size: 252.0pt x 165.0979pt.
 
 
@@ -339,7 +324,7 @@ Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 63--64
+Underfull \hbox (badness 10000) in paragraph at lines 61--62
 
  []
 
@@ -347,7 +332,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 63--64
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 65--66
+Underfull \hbox (badness 10000) in paragraph at lines 63--64
 
  []
 
@@ -355,14 +340,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 65--66
 File: images/allStarSpec.png Graphic file (type png)
 
 <use images/allStarSpec.png>
-Package pdftex.def Info: images/allStarSpec.png used on input line 69.
+Package pdftex.def Info: images/allStarSpec.png used on input line 67.
 (pdftex.def)             Requested size: 170.71652pt x 163.79366pt.
 
 <images/horribleSpec.png, id=13, 432.61626pt x 429.605pt>
 File: images/horribleSpec.png Graphic file (type png)
 
 <use images/horribleSpec.png>
-Package pdftex.def Info: images/horribleSpec.png used on input line 75.
+Package pdftex.def Info: images/horribleSpec.png used on input line 73.
 (pdftex.def)             Requested size: 170.71652pt x 169.52495pt.
 
 
@@ -372,33 +357,33 @@ Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 80--81
+Underfull \hbox (badness 10000) in paragraph at lines 78--79
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 83--84
+Underfull \hbox (badness 10000) in paragraph at lines 81--82
 
  []
 
 <images/BandUnB.png, id=14, 797.98125pt x 377.41pt>
 File: images/BandUnB.png Graphic file (type png)
  <use images/BandUnB.png>
-Package pdftex.def Info: images/BandUnB.png used on input line 86.
+Package pdftex.def Info: images/BandUnB.png used on input line 84.
 (pdftex.def)             Requested size: 252.0pt x 119.18423pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 92--93
+Underfull \hbox (badness 10000) in paragraph at lines 90--91
 
  []
 
 [2 <./images/tool.png> <./images/allStarSpec.png> <./images/horribleSpec.png> <
 ./images/BandUnB.png>]
-Underfull \hbox (badness 2512) in paragraph at lines 94--95
+Underfull \hbox (badness 2512) in paragraph at lines 92--93
 []\OT1/ptm/m/n/10 There are a num-ber of pa-ram-e-ters in our k-Means
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 94--95
+Underfull \hbox (badness 10000) in paragraph at lines 92--93
 
  []
 
@@ -406,7 +391,7 @@ Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 96--97
+Underfull \hbox (badness 10000) in paragraph at lines 94--95
 
  []
 
@@ -414,41 +399,41 @@ Underfull \hbox (badness 10000) in paragraph at lines 96--97
 File: images/parameters.png Graphic file (type png)
 
 <use images/parameters.png>
-Package pdftex.def Info: images/parameters.png used on input line 99.
+Package pdftex.def Info: images/parameters.png used on input line 97.
 (pdftex.def)             Requested size: 252.0pt x 48.32678pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 102--103
+
+ []
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 104--105
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 106--107
-
- []
-
-
-Underfull \hbox (badness 6808) in paragraph at lines 110--111
+Underfull \hbox (badness 6808) in paragraph at lines 108--109
 []\OT1/ptm/m/n/10 The In-dian pines hy-per-spec-tral data was clus-tered
  []
 
 
-Underfull \hbox (badness 1688) in paragraph at lines 110--111
+Underfull \hbox (badness 1688) in paragraph at lines 108--109
 \OT1/ptm/m/n/10 ground truth via our method com-bin-ing band se-lec-tion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 110--111
+Underfull \hbox (badness 10000) in paragraph at lines 108--109
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 126--127
+Underfull \hbox (badness 10000) in paragraph at lines 124--125
 []\OT1/ptm/m/n/8 Blondel, Math-ieu. \OT1/ptm/m/it/8 Fuzzy K-means and K-medians
 .
  []
 
 
-Underfull \hbox (badness 3029) in paragraph at lines 126--127
+Underfull \hbox (badness 3029) in paragraph at lines 124--125
 \OT1/ptm/m/n/8 https://gist.github.com/mblondel/1451300. N.p., 2011. Web. 4 May
 
  []
@@ -457,53 +442,53 @@ Missing character: There is no â in font ptmri7t!
 Missing character: There is no € in font ptmri7t!
 Missing character: There is no “ in font ptmri7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 138--139
+Underfull \hbox (badness 10000) in paragraph at lines 136--137
 []\OT1/ptm/m/n/8 Francis, Louise. \OT1/ptm/m/it/8 Ap-pli-ca-tions of Un-su-per-
 vised Learn-ing in
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 138--139
+Underfull \hbox (badness 10000) in paragraph at lines 136--137
 \OT1/ptm/m/it/8 Prop-erty and Ca-su-alty In-sur-ance with Em-pha-sis on Fraud
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 138--139
+Underfull \hbox (badness 10000) in paragraph at lines 136--137
 \OT1/ptm/m/it/8 Anal-y-sis \OT1/ptm/m/n/8 http://www.slideshare.net/salfordsyst
 ems/final-applications-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 141--142
+Underfull \hbox (badness 10000) in paragraph at lines 139--140
 []\OT1/ptm/m/n/8 Matteo, Mat-teucci. \OT1/ptm/m/it/8 A Tu-to-rial on Clus-ter-i
 ng Al-go-rithms.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 141--142
+Underfull \hbox (badness 10000) in paragraph at lines 139--140
 \OT1/ptm/m/n/8 http://home.deib.polimi.it/matteucc/Clustering/tutorial[]html/. 
 N.p.,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 144--145
+Underfull \hbox (badness 10000) in paragraph at lines 142--143
 []\OT1/ptm/m/n/8 Purdue Re-search Foun-da-tion. \OT1/ptm/m/it/8 Hy-per-spec-tra
 l Re-mote Sens-ing
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 144--145
+Underfull \hbox (badness 10000) in paragraph at lines 142--143
 \OT1/ptm/m/it/8 Scenes. \OT1/ptm/m/n/8 http://www.ehu.eus/ccwintco/index.php?ti
 tle=Hyperspectral
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 147--148
+Underfull \hbox (badness 10000) in paragraph at lines 145--146
 []\OT1/ptm/m/n/8 Zhang, Han-tao. \OT1/ptm/m/it/8 Un-su-per-vised Learn-ing.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 147--148
+Underfull \hbox (badness 10000) in paragraph at lines 145--146
 \OT1/ptm/m/n/8 http://homepage.cs.uiowa.edu/[]hzhang/c145/notes/chap18b.pdf. N.
 p.,
  []
@@ -523,7 +508,7 @@ texlive/2015basic/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/20
 ic/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2015basic/t
 exmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015basic/texmf-
 dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on project-2-jiqixuexitalnanle.pdf (3 pages, 3813140 bytes).
+Output written on project-2-jiqixuexitalnanle.pdf (3 pages, 3813221 bytes).
 PDF statistics:
  41 PDF objects out of 1000 (max. 8388607)
  22 compressed objects within 1 object stream
