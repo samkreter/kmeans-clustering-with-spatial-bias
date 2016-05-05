@@ -42,9 +42,9 @@ The Indian Pines \cite{IndianPines} dataset used in our research consisted of tw
 %\hfill August 26, 20154
 
 \subsection{Literature Review}
-When clustering hyperspectral imaging data it is often necessary to implement some sort of dimensionality reduction; in many cases it has been found that simple methods such as band selection can lead to robust clusterings without the overhead of high dimensional feature spaces [1]. These results motivate our implementation of specific band selection and weighting as an alternative to PCA.\\
+When clustering hyperspectral imaging data it is often necessary to implement some sort of dimensionality reduction; in many cases it has been found that simple methods such as band selection can lead to robust clusterings without the overhead of high dimensional feature spaces \cite{PCADimensionReduction}. These results motivate our implementation of specific band selection and weighting as an alternative to PCA.\\
 
-Additionally, the incorporation of spatial data with the spectral signatures has been shown to provide valuable information when it comes to unsupervised clustering [2]. Given the demonstrated success that others have had incorporating spatial data in a variety of applications, we chose to implement the spatial data via our own spatial biasing algorithm.\\
+Additionally, the incorporation of spatial data with the spectral signatures has been shown to provide valuable information when it comes to unsupervised clustering \cite{SpectralSpatial}. Given the demonstrated success that others have had incorporating spatial data in a variety of applications, we chose to implement the spatial data via our own spatial biasing algorithm.\\
 
 \section{Implementation}
   \subsection{K-Means \& PCA Implementation}
@@ -127,6 +127,12 @@ Additionally, the incorporation of spatial data with the spectral signatures has
 
 \bibitem{ScikitLearnAPI}
   Buitinck et al., \emph{API design for machine learning software: experiences from the scikit-learn project.} ECML PKDD Workshop, pp. 108-122, 2013.
+
+\bibitem{PCADimensionReduction}
+  M. Farrell and R. Mersereau, \emph{On the Impact of PCA Dimension Reduction for Hyperspectral Detection of Difficult Targets},IEEE Geosci. Remote Sens., vol. 2, no. 2, pp. 192-195, Apr. 2005.
+
+\bibitem{SpectralSpatial}
+  M. Fauvel,Y. Tarabalka, J. Benediktsson, J. Chanussot, and J. Tilton, \emph{Advances in Spectral–Spatial Classification of Hyperspectral Images}, Proceedings of IEEE, vol. 101, no. 3, pp. 652-675, Sept. 2012.
 
 \bibitem{FraudAnalysis}
   Francis, Louise. \emph{Applications of Unsupervised Learning in Property and Casualty Insurance with Emphasis on Fraud Analysis} http://www.slideshare.net/salfordsystems/final-applications-of-unsupervised-learning-in-pc. N.p., 2012. Web. 4 May 2016.

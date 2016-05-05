@@ -1,17 +1,12 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.3.21)  5 MAY 2016 02:31
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.1.28)  5 MAY 2016 02:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**/Users/samkreter/school/machineLearning/project-2-jiqixuexitainanle/report/pr
-oject-2-jiqixuexitalnanle.tex
-
-(/Users/samkreter/school/machineLearning/project-2-jiqixuexitainanle/report/pro
-ject-2-jiqixuexitalnanle.tex
-LaTeX2e <2016/02/01>
-Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
-
-(/Users/samkreter/school/machineLearning/project-2-jiqixuexitainanle/report/IEE
-Etran.cls
+**project-2-jiqixuexitalnanle.tex
+(./project-2-jiqixuexitalnanle.tex
+LaTeX2e <2011/06/27>
+Babel <3.9h> and hyphenation patterns for 2 languages loaded.
+(./IEEEtran.cls
 Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
 -- See the "IEEEtran_HOWTO" manual for usage information.
 -- http://www.michaelshell.org/tex/ieeetran/
@@ -24,7 +19,7 @@ Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
 \@IEEEtrantmptoksA=\toks14
 LaTeX Font Info:    Try loading font information for OT1+ptm on input line 503.
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 -- Using 8.5in x 11in (letter) paper.
@@ -118,37 +113,47 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
 \IEEEPARstartletwidth=\dimen125
 \c@IEEEbiography=\count93
 \@IEEEtranrubishbin=\box27
-) (/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
-(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks15
-) (/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2016/01/03 v1.0q Standard LaTeX Graphics (DPC,SPQR)
-(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/trig.sty
-Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-) (/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/graphics.cfg
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
 File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
-Package graphics Info: Driver file: pdftex.def on input line 95.
-(/usr/local/texlive/2015/texmf-dist/tex/latex/pdftex-def/pdftex.def
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
-) (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count94
 ))
 \Gin@req@height=\dimen126
 \Gin@req@width=\dimen127
-) (/usr/local/texlive/2015/texmf-dist/tex/latex/caption/subcaption.sty
-Package: subcaption 2016/02/20 v1.1-142 Sub-captions (AR)
-(/usr/local/texlive/2015/texmf-dist/tex/latex/caption/caption.sty
-Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
-(/usr/local/texlive/2015/texmf-dist/tex/latex/caption/caption3.sty
-Package: caption3 2016/02/04 v1.7-139 caption3 kernel (AR)
-Package caption3 Info: TeX engine: e-TeX on input line 67.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
 \captionmargin=\dimen128
 \captionmargin@=\dimen129
 \captionwidth=\dimen130
@@ -179,9 +184,7 @@ ference \hbox to\hsize {\normalfont \footnotesize \hfil \box \@tempboxa \hfil }
 )
 \c@subfigure=\count96
 \c@subtable=\count97
-)
-(/Users/samkreter/school/machineLearning/project-2-jiqixuexitainanle/report/pro
-ject-2-jiqixuexitalnanle.aux)
+) (./project-2-jiqixuexitalnanle.aux)
 \openout1 = `project-2-jiqixuexitalnanle.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
@@ -196,8 +199,9 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
 LaTeX Font Info:    ... okay on input line 11.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
 LaTeX Font Info:    ... okay on input line 11.
+
 -- Lines per column: 58 (exact).
-(/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count98
 \scratchdimen=\dimen135
@@ -210,13 +214,15 @@ LaTeX Font Info:    ... okay on input line 11.
 \MPnumerator=\count102
 \makeMPintoPDFobject=\count103
 \everyMPtoPDFconversion=\toks17
-) (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
-) (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
@@ -224,17 +230,23 @@ Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-) (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
-(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/grfext.sty
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
 Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
-)) (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
 Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
 Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
@@ -245,7 +257,8 @@ Package grfext Info: Graphics extension search list:
 (grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 452.
-(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
@@ -304,9 +317,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 55--56
 
 <images/tool.png, id=1, 1106.1325pt x 724.7075pt>
 File: images/tool.png Graphic file (type png)
-<use images/tool.png>
+ <use images/tool.png>
 Package pdftex.def Info: images/tool.png used on input line 58.
 (pdftex.def)             Requested size: 252.0pt x 165.0979pt.
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -324,7 +338,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 63--64
 
  []
 
-[1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
@@ -334,14 +348,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 65--66
 
 <images/allStarSpec.png, id=12, 445.665pt x 427.5975pt>
 File: images/allStarSpec.png Graphic file (type png)
+
 <use images/allStarSpec.png>
 Package pdftex.def Info: images/allStarSpec.png used on input line 69.
 (pdftex.def)             Requested size: 170.71652pt x 163.79366pt.
+
 <images/horribleSpec.png, id=13, 432.61626pt x 429.605pt>
 File: images/horribleSpec.png Graphic file (type png)
+
 <use images/horribleSpec.png>
 Package pdftex.def Info: images/horribleSpec.png used on input line 75.
 (pdftex.def)             Requested size: 170.71652pt x 169.52495pt.
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -360,7 +378,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 83--84
 
 <images/BandUnB.png, id=14, 797.98125pt x 377.41pt>
 File: images/BandUnB.png Graphic file (type png)
-<use images/BandUnB.png>
+ <use images/BandUnB.png>
 Package pdftex.def Info: images/BandUnB.png used on input line 86.
 (pdftex.def)             Requested size: 252.0pt x 119.18423pt.
 
@@ -368,11 +386,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 92--93
 
  []
 
-[2 </Users/samkreter/school/machineLearning/project-2-jiqixuexitainanle/report/
-images/tool.png> </Users/samkreter/school/machineLearning/project-2-jiqixuexita
-inanle/report/images/allStarSpec.png> </Users/samkreter/school/machineLearning/
-project-2-jiqixuexitainanle/report/images/horribleSpec.png> </Users/samkreter/s
-chool/machineLearning/project-2-jiqixuexitainanle/report/images/BandUnB.png>]
+[2 <./images/tool.png> <./images/allStarSpec.png> <./images/horribleSpec.png> <
+./images/BandUnB.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 94--95
 
  []
@@ -387,6 +402,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 96--97
 
 <images/parameters.png, id=22, 732.7375pt x 140.525pt>
 File: images/parameters.png Graphic file (type png)
+
 <use images/parameters.png>
 Package pdftex.def Info: images/parameters.png used on input line 99.
 (pdftex.def)             Requested size: 252.0pt x 48.32678pt.
@@ -435,77 +451,76 @@ Underfull \hbox (badness 3029) in paragraph at lines 126--127
 
  []
 
+Missing character: There is no â in font ptmri7t!
+Missing character: There is no € in font ptmri7t!
+Missing character: There is no “ in font ptmri7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 132--133
+Underfull \hbox (badness 10000) in paragraph at lines 138--139
 []\OT1/ptm/m/n/8 Francis, Louise. \OT1/ptm/m/it/8 Ap-pli-ca-tions of Un-su-per-
 vised Learn-ing in
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 132--133
+Underfull \hbox (badness 10000) in paragraph at lines 138--139
 \OT1/ptm/m/it/8 Prop-erty and Ca-su-alty In-sur-ance with Em-pha-sis on Fraud
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 132--133
+Underfull \hbox (badness 10000) in paragraph at lines 138--139
 \OT1/ptm/m/it/8 Anal-y-sis \OT1/ptm/m/n/8 http://www.slideshare.net/salfordsyst
 ems/final-applications-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 135--136
+Underfull \hbox (badness 10000) in paragraph at lines 141--142
 []\OT1/ptm/m/n/8 Matteo, Mat-teucci. \OT1/ptm/m/it/8 A Tu-to-rial on Clus-ter-i
 ng Al-go-rithms.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 135--136
+Underfull \hbox (badness 10000) in paragraph at lines 141--142
 \OT1/ptm/m/n/8 http://home.deib.polimi.it/matteucc/Clustering/tutorial[]html/. 
 N.p.,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 138--139
+Underfull \hbox (badness 10000) in paragraph at lines 144--145
 []\OT1/ptm/m/n/8 Purdue Re-search Foun-da-tion. \OT1/ptm/m/it/8 Hy-per-spec-tra
 l Re-mote Sens-ing
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 138--139
+Underfull \hbox (badness 10000) in paragraph at lines 144--145
 \OT1/ptm/m/it/8 Scenes. \OT1/ptm/m/n/8 http://www.ehu.eus/ccwintco/index.php?ti
 tle=Hyperspectral
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 141--142
+Underfull \hbox (badness 10000) in paragraph at lines 147--148
 []\OT1/ptm/m/n/8 Zhang, Han-tao. \OT1/ptm/m/it/8 Un-su-per-vised Learn-ing.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 141--142
+Underfull \hbox (badness 10000) in paragraph at lines 147--148
 \OT1/ptm/m/n/8 http://homepage.cs.uiowa.edu/[]hzhang/c145/notes/chap18b.pdf. N.
 p.,
  []
 
-[3 </Users/samkreter/school/machineLearning/project-2-jiqixuexitainanle/report/
-images/parameters.png>]
-(/Users/samkreter/school/machineLearning/project-2-jiqixuexitainanle/report/pro
-ject-2-jiqixuexitalnanle.aux) ) 
+[3 <./images/parameters.png>] (./project-2-jiqixuexitalnanle.aux) ) 
 Here is how much of TeX's memory you used:
- 3453 strings out of 493033
- 59736 string characters out of 6134139
- 126328 words of memory out of 5000000
- 6975 multiletter control sequences out of 15000+600000
+ 3432 strings out of 495028
+ 58338 string characters out of 6181497
+ 121609 words of memory out of 5000000
+ 6630 multiletter control sequences out of 15000+600000
  37366 words of font info for 67 fonts, out of 8000000 for 9000
- 1144 hyphenation exceptions out of 8191
- 42i,5n,40p,1386b,245s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2015/texmf-dist/fonts/enc/dv
-ips/base/8r.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmb8
-a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></u
-sr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/t
-exlive/2015/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on /Users/samkreter/school/machineLearning/project-2-jiqixuexita
-inanle/report/project-2-jiqixuexitalnanle.pdf (3 pages, 3811809 bytes).
+ 17 hyphenation exceptions out of 8191
+ 42i,5n,40p,1311b,245s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/
+texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/f
+onts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
+times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on project-2-jiqixuexitalnanle.pdf (3 pages, 3812999 bytes).
 PDF statistics:
  41 PDF objects out of 1000 (max. 8388607)
  22 compressed objects within 1 object stream
