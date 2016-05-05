@@ -41,6 +41,11 @@ The Indian Pines \cite{IndianPines} dataset used in our research consisted of tw
 
 %\hfill August 26, 20154
 
+\subsection{Literature Review}
+When clustering hyperspectral imaging data it is often necessary to implement some sort of dimensionality reduction; in many cases it has been found that simple methods such as band selection can lead to robust clusterings without the overhead of high dimensional feature spaces [1]. These results motivate our implementation of specific band selection and weighting as an alternative to PCA.\\
+
+Additionally, the incorporation of spatial data with the spectral signatures has been shown to provide valuable information when it comes to unsupervised clustering [2]. Given the demonstrated success that others have had incorporating spatial data in a variety of applications, we chose to implement the spatial data via our own spatial biasing algorithm.\\
+
 \section{Implementation}
   \subsection{K-Means \& PCA Implementation}
     In order to efficiently implement a variety of candidate algorithms for this unsupervised clustering problem, we decided to use the popular python machine learning library scikit-learn \cite{ScikitLearnAPI}.\\

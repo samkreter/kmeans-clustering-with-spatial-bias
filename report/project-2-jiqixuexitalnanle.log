@@ -1,12 +1,17 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  5 MAY 2016 02:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.3.21)  5 MAY 2016 02:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**project-2-jiqixuexitalnanle.tex
-(./project-2-jiqixuexitalnanle.tex
-LaTeX2e <2015/01/01>
-Babel <3.9l> and hyphenation patterns for 79 languages loaded.
-(./IEEEtran.cls
+**/Users/samkreter/school/machineLearning/project-2-jiqixuexitainanle/report/pr
+oject-2-jiqixuexitalnanle.tex
+
+(/Users/samkreter/school/machineLearning/project-2-jiqixuexitainanle/report/pro
+ject-2-jiqixuexitalnanle.tex
+LaTeX2e <2016/02/01>
+Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
+
+(/Users/samkreter/school/machineLearning/project-2-jiqixuexitainanle/report/IEE
+Etran.cls
 Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
 -- See the "IEEEtran_HOWTO" manual for usage information.
 -- http://www.michaelshell.org/tex/ieeetran/
@@ -115,45 +120,35 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
 \@IEEEtranrubishbin=\box27
 ) (/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
-
 (/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks15
-)
-(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
-
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2016/01/03 v1.0q Standard LaTeX Graphics (DPC,SPQR)
 (/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/trig.sty
-Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
-)
-(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/graphics.cfg
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/graphics.cfg
 File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
-Package graphics Info: Driver file: pdftex.def on input line 94.
-
+Package graphics Info: Driver file: pdftex.def on input line 95.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
-
 (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
-)
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+) (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count94
 ))
 \Gin@req@height=\dimen126
 \Gin@req@width=\dimen127
-)
-(/usr/local/texlive/2015/texmf-dist/tex/latex/caption/subcaption.sty
-Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
-
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2016/02/20 v1.1-142 Sub-captions (AR)
 (/usr/local/texlive/2015/texmf-dist/tex/latex/caption/caption.sty
-Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
-
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
 (/usr/local/texlive/2015/texmf-dist/tex/latex/caption/caption3.sty
-Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
-Package caption3 Info: TeX engine: e-TeX on input line 57.
+Package: caption3 2016/02/04 v1.7-139 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
 \captionmargin=\dimen128
 \captionmargin@=\dimen129
 \captionwidth=\dimen130
@@ -184,7 +179,9 @@ ference \hbox to\hsize {\normalfont \footnotesize \hfil \box \@tempboxa \hfil }
 )
 \c@subfigure=\count96
 \c@subtable=\count97
-) (./project-2-jiqixuexitalnanle.aux)
+)
+(/Users/samkreter/school/machineLearning/project-2-jiqixuexitainanle/report/pro
+ject-2-jiqixuexitalnanle.aux)
 \openout1 = `project-2-jiqixuexitalnanle.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
@@ -199,7 +196,6 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
 LaTeX Font Info:    ... okay on input line 11.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
 LaTeX Font Info:    ... okay on input line 11.
-
 -- Lines per column: 58 (exact).
 (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -217,12 +213,10 @@ LaTeX Font Info:    ... okay on input line 11.
 ) (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
-
 (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
-)
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+) (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
@@ -230,22 +224,16 @@ Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-)
-(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
-
 (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
-
 (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
 Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
-))
-(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+)) (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
-
 (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
 Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
-
 (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/etexcmds.sty
 Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
 Package etexcmds Info: Could not find \expanded.
@@ -257,7 +245,6 @@ Package grfext Info: Graphics extension search list:
 (grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 452.
-
 (/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
@@ -275,31 +262,54 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--39
  []
 
 
-Underfull \hbox (badness 1540) in paragraph at lines 46--47
+Underfull \hbox (badness 10000) in paragraph at lines 45--46
+
+ []
+
+
+Underfull \hbox (badness 1509) in paragraph at lines 47--48
+\OT1/ptm/m/n/10 spec-tral sig-na-tures has been shown to pro-vide valu-able
+ []
+
+
+Underfull \hbox (badness 4084) in paragraph at lines 47--48
+\OT1/ptm/m/n/10 in-for-ma-tion when it comes to un-su-per-vised clus-ter-ing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--48
+
+ []
+
+
+Underfull \hbox (badness 1540) in paragraph at lines 51--52
 \OT1/ptm/m/n/10 al-go-rithms for this un-su-per-vised clus-ter-ing prob-lem, we
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 46--47
+Underfull \hbox (badness 10000) in paragraph at lines 51--52
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 48--49
+Underfull \hbox (badness 10000) in paragraph at lines 53--54
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 50--51
+Underfull \hbox (badness 10000) in paragraph at lines 55--56
 
  []
 
 <images/tool.png, id=1, 1106.1325pt x 724.7075pt>
 File: images/tool.png Graphic file (type png)
- <use images/tool.png>
-Package pdftex.def Info: images/tool.png used on input line 53.
+<use images/tool.png>
+Package pdftex.def Info: images/tool.png used on input line 58.
 (pdftex.def)             Requested size: 252.0pt x 165.0979pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
@@ -310,56 +320,60 @@ Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 58--59
+Underfull \hbox (badness 10000) in paragraph at lines 63--64
 
  []
 
 [1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
- <./images/tool.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 60--61
+]
+Underfull \hbox (badness 10000) in paragraph at lines 65--66
 
  []
 
-<images/allStarSpec.png, id=13, 445.665pt x 427.5975pt>
+<images/allStarSpec.png, id=12, 445.665pt x 427.5975pt>
 File: images/allStarSpec.png Graphic file (type png)
-
 <use images/allStarSpec.png>
-Package pdftex.def Info: images/allStarSpec.png used on input line 64.
+Package pdftex.def Info: images/allStarSpec.png used on input line 69.
 (pdftex.def)             Requested size: 170.71652pt x 163.79366pt.
-
-<images/horribleSpec.png, id=14, 432.61626pt x 429.605pt>
+<images/horribleSpec.png, id=13, 432.61626pt x 429.605pt>
 File: images/horribleSpec.png Graphic file (type png)
-
 <use images/horribleSpec.png>
-Package pdftex.def Info: images/horribleSpec.png used on input line 70.
+Package pdftex.def Info: images/horribleSpec.png used on input line 75.
 (pdftex.def)             Requested size: 170.71652pt x 169.52495pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 75--76
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 78--79
+Underfull \hbox (badness 10000) in paragraph at lines 83--84
 
  []
 
-<images/BandUnB.png, id=15, 797.98125pt x 377.41pt>
+<images/BandUnB.png, id=14, 797.98125pt x 377.41pt>
 File: images/BandUnB.png Graphic file (type png)
- <use images/BandUnB.png>
-Package pdftex.def Info: images/BandUnB.png used on input line 81.
+<use images/BandUnB.png>
+Package pdftex.def Info: images/BandUnB.png used on input line 86.
 (pdftex.def)             Requested size: 252.0pt x 119.18423pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--88
+Underfull \hbox (badness 10000) in paragraph at lines 92--93
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 89--90
+[2 </Users/samkreter/school/machineLearning/project-2-jiqixuexitainanle/report/
+images/tool.png> </Users/samkreter/school/machineLearning/project-2-jiqixuexita
+inanle/report/images/allStarSpec.png> </Users/samkreter/school/machineLearning/
+project-2-jiqixuexitainanle/report/images/horribleSpec.png> </Users/samkreter/s
+chool/machineLearning/project-2-jiqixuexitainanle/report/images/BandUnB.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 94--95
 
  []
 
@@ -367,39 +381,22 @@ Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 91--92
+Underfull \hbox (badness 10000) in paragraph at lines 96--97
 
  []
 
-[2 <./images/allStarSpec.png> <./images/horribleSpec.png> <./images/BandUnB.png
->] <images/parameters.png, id=22, 732.7375pt x 140.525pt>
+<images/parameters.png, id=22, 732.7375pt x 140.525pt>
 File: images/parameters.png Graphic file (type png)
-
 <use images/parameters.png>
-Package pdftex.def Info: images/parameters.png used on input line 94.
+Package pdftex.def Info: images/parameters.png used on input line 99.
 (pdftex.def)             Requested size: 252.0pt x 48.32678pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 99--100
+Underfull \hbox (badness 10000) in paragraph at lines 104--105
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 101--102
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 103--104
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 105--106
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 107--108
+Underfull \hbox (badness 10000) in paragraph at lines 106--107
 
  []
 
@@ -422,6 +419,9 @@ Underfull \hbox (badness 2600) in paragraph at lines 110--111
 Underfull \hbox (badness 10000) in paragraph at lines 110--111
 
  []
+
+
+Underfull \vbox (badness 6188) has occurred while \output is active []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 126--127
@@ -487,22 +487,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 141--142
 p.,
  []
 
-[3 <./images/parameters.png>] (./project-2-jiqixuexitalnanle.aux) ) 
+[3 </Users/samkreter/school/machineLearning/project-2-jiqixuexitainanle/report/
+images/parameters.png>]
+(/Users/samkreter/school/machineLearning/project-2-jiqixuexitainanle/report/pro
+ject-2-jiqixuexitalnanle.aux) ) 
 Here is how much of TeX's memory you used:
- 3430 strings out of 493089
- 58557 string characters out of 6134842
- 125666 words of memory out of 5000000
- 6903 multiletter control sequences out of 15000+600000
+ 3453 strings out of 493033
+ 59736 string characters out of 6134139
+ 126328 words of memory out of 5000000
+ 6975 multiletter control sequences out of 15000+600000
  37366 words of font info for 67 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 42i,5n,40p,1311b,245s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/
-texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2015/te
-xmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/f
-onts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type
-1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/time
-s/utmri8a.pfb>
-Output written on project-2-jiqixuexitalnanle.pdf (3 pages, 3812149 bytes).
+ 42i,5n,40p,1386b,245s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2015/texmf-dist/fonts/enc/dv
+ips/base/8r.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmb8
+a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></u
+sr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/t
+exlive/2015/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on /Users/samkreter/school/machineLearning/project-2-jiqixuexita
+inanle/report/project-2-jiqixuexitalnanle.pdf (3 pages, 3811809 bytes).
 PDF statistics:
  41 PDF objects out of 1000 (max. 8388607)
  22 compressed objects within 1 object stream
