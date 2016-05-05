@@ -1,4 +1,6 @@
 \documentclass[journal]{IEEEtran}
+\usepackage{graphicx}
+\usepackage{subcaption}
 
 \ifCLASSINFOpdf
 \else
@@ -47,9 +49,27 @@ The Indian Pines [reference] dataset used in our research consisted of two-hundr
 
     We next looked into dimensionality reduction. The initial dataset is 145x145 pixels in size with 220 spectral layers for each pixel. We again used scikit-learn to implement Principal Component Analysis, or PCA. This implementation also allows for whitening, which can be used as another parameter during the experiments to find the best method.\\
 
-    In order to gain a better understanding of the data, we developed a simple tool using python and matplotlib to visualize each layer of the spectral data. Figure VIEWER shows the simple interface.  After selecting an X, Y spatial position and a spectral layer number, the top graph shows the relationship between the currently selected pixel’s spectral data (in blue) and the previously visited pixel’s data (in red). The bottom-right graph shows the visual representation of the specified spectral layer. This allows us to easily see each layer’s impact on the final clustering of the data. The bottom-left graph shows the final ground truth of the dataset for reference, along with a black point indicating the current X, Y position.\\
+    In order to gain a better understanding of the data, we developed a simple tool using python and matplotlib to visualize each layer of the spectral data. Figure \ref{fig:Viewer} shows the simple interface.  After selecting an X, Y spatial position and a spectral layer number, the top graph shows the relationship between the currently selected pixel’s spectral data (in blue) and the previously visited pixel’s data (in red). The bottom-right graph shows the visual representation of the specified spectral layer. This allows us to easily see each layer’s impact on the final clustering of the data. The bottom-left graph shows the final ground truth of the dataset for reference, along with a black point indicating the current X, Y position.\\
 
-    Using this tool, we were able to create a normalization function to weight the more distinctive spectral layers more heavily, as shown in figure [ALLSTAR], while assigning a smaller weight to the less indicative layers such as shown in figure [SHITLAYER].\\
+    \begin{figure}[h!]
+      \centering\includegraphics[width=\columnwidth]{images/tool.png}
+      \caption{Spectral Data Viewer}
+      \label{fig:Viewer}
+    \end{figure}
+
+    Using this tool, we were able to create a normalization function to weight the more distinctive spectral layers more heavily, as shown in Figure \ref{fig:GoodLayer}, while assigning a smaller weight to the less indicative layers such as shown in Figure \ref{fig:BadLayer}.\\
+
+    \begin{figure}[h!]
+      \centering\includegraphics[width=\columnwidth]{images/allStarSpec.png}
+      \caption{Good Spectral Layer}
+      \label{fig:GoodLayer}
+    \end{figure}
+
+    \begin{figure}[h!]
+      \centering\includegraphics[width=\columnwidth]{images/horribleSpec.png}
+      \caption{Bad Spectral Layer}
+      \label{fig:BadLayer}
+    \end{figure}
 
     After applying normalization on the spectral layers, we experimented with giving a pixel’s spatial coordinates greater impact in the final clusterings. Because the initial data processing converted the data cube into a set of feature vectors, spatial information was lost. To fix this, we append the X and Y position onto the spectral feature vector and factored the X and Y weights into the normalization.\\
 
@@ -59,7 +79,15 @@ The Indian Pines [reference] dataset used in our research consisted of two-hundr
 \section{Experiments}
   In order to test for the best approach, we used the base implementation of K-Means with 16 cluster centers as a baseline for the following experiments. We also used both the rand index and the adjusted rand index as a quantitative measurement of accuracy. We used the adjusted rand index as a reference to have a clearing result since as the data set increases so does the randomness causing the rand index to be higher than it should be.\\
 
-  From the implementation described above, there are many parameters ranging from the normalization weighting, to the use of PCA and whitening that all need to be set in order to get an accurate clustering result. In order to have a homogeneous computing environment that we could set for long running jobs, we set up a server using Amazon Web Services [REFERENCE]. We then ran a script to run the algorithms with the different parameter sets. Figure [parameter page] show the different parameters that were tested and their values.\\
+  From the implementation described above, there are many parameters ranging from the normalization weighting, to the use of PCA and whitening that all need to be set in order to get an accurate clustering result. In order to have a homogeneous computing environment that we could set for long running jobs, we set up a server using Amazon Web Services [REFERENCE]. We then ran a script to run the algorithms with the different parameter sets. Figure \ref{fig:Parameters} show the different parameters that were tested and their values.\\
+
+  \begin{figure}[h!]
+    \centering\includegraphics[width=\columnwidth]{images/parameters.png}
+    \caption{Parameters for Experiments}
+    \label{fig:Parameters}
+  \end{figure}
+
+  Table of sam's bullshit
 
   From these experiments we were able to see the different trends in the parameter sets. The first trend was in the normalization set. The x and y position had a maximum effect at a weight of 2 times the original. The overall spectral weighting was best at .001 times to make it comparable to the positional. The experiment also shows that the spectral layers 167, 52, and 120 give the best impact on the final clusters weighted at 2000, 100, 100 respectively. We also found that using PCA had a negative effect on the final clustering result since the PCA would form the spectral clusters together based off their variance not saving the spatial representation.\\
 
