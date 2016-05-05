@@ -61,20 +61,26 @@ The Indian Pines [reference] dataset used in our research consisted of two-hundr
 
     \begin{figure}[h!]
       \centering\includegraphics[width=\columnwidth]{images/allStarSpec.png}
-      \caption{Good Spectral Layer}
+      \caption{Useful Spectral Layer}
       \label{fig:GoodLayer}
     \end{figure}
 
     \begin{figure}[h!]
       \centering\includegraphics[width=\columnwidth]{images/horribleSpec.png}
-      \caption{Bad Spectral Layer}
+      \caption{Useless Spectral Layer}
       \label{fig:BadLayer}
     \end{figure}
 
     After applying normalization on the spectral layers, we experimented with giving a pixel’s spatial coordinates greater impact in the final clusterings. Because the initial data processing converted the data cube into a set of feature vectors, spatial information was lost. To fix this, we append the X and Y position onto the spectral feature vector and factored the X and Y weights into the normalization.\\
 
-  \subsection{Neighborhood implementation}
+  \subsection{Neighborhood Implementation}
     Another look at the data revealed that neighboring pixels are very often in the same class; it seems intuitive that spatially close areas have similar spectral signatures.  This observation can be used to enforce a bias on any proposed clustering provided by K-means or any other clustering algorithm. The neighborhood biasing algorithm we created iterates through each pixel, surveying its neighbors within a defined spatial radius, and finds the mode of the classes found.  If a certain class is found to be very predominant in the immediate spatial neighborhood, the class of the current pixel is changed to that class.  The algorithm is iterative and can be run as many times as desired until convergence.  The result of the neighborhood bias algorithm is the removal of spectral outliers in otherwise well-defined clusters and an overall smoothing of the output provided by some clustering algorithms. This approach can be beneficial if there are many spectrally noisy outliers, but could also be bad if there are small clusters that could be smoothed over by the algorithm. The radius of the polling neighborhood and the number iterations can control the level of smoothing. In our case, we generally used a small radius of 2 pixels and 10 iterations of the algorithm.\\
+
+    \begin{figure}[h!]
+      \centering\includegraphics[width=\columnwidth]{images/BandUnB.png}
+      \caption{Before and After Neighborhood Bias}
+      \label{fig:NeighborhoodBias}
+    \end{figure}
 
 \section{Experiments}
   In order to test for the best approach, we used the base implementation of K-Means with 16 cluster centers as a baseline for the following experiments. We also used both the rand index and the adjusted rand index as a quantitative measurement of accuracy. We used the adjusted rand index as a reference to have a clearing result since as the data set increases so does the randomness causing the rand index to be higher than it should be.\\
@@ -86,8 +92,6 @@ The Indian Pines [reference] dataset used in our research consisted of two-hundr
     \caption{Parameters for Experiments}
     \label{fig:Parameters}
   \end{figure}
-
-  Table of sam's bullshit
 
   From these experiments we were able to see the different trends in the parameter sets. The first trend was in the normalization set. The x and y position had a maximum effect at a weight of 2 times the original. The overall spectral weighting was best at .001 times to make it comparable to the positional. The experiment also shows that the spectral layers 167, 52, and 120 give the best impact on the final clusters weighted at 2000, 100, 100 respectively. We also found that using PCA had a negative effect on the final clustering result since the PCA would form the spectral clusters together based off their variance not saving the spatial representation.\\
 
