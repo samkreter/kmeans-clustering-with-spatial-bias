@@ -27,7 +27,7 @@ Testing
 
 In order to run type
 
-    ` python main.py `
+    python main.py
 
 The ouput will
 
