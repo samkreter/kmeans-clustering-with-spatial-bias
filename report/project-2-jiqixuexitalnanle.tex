@@ -11,7 +11,7 @@
 \begin{document}
 
 
-\title{K-Means and PCA for Image\\ Segmentation}
+\title{Spectral Weighting and Spatial Biasing\\ for Hyperspectral K-Means Clustering}
 
 
 \author{Daniel Hanson, Sam Kreter, Brendan Marsh, and Christina R.S. Mosnick}
@@ -101,7 +101,7 @@ The Indian Pines [reference] dataset used in our research consisted of two-hundr
   In order to test the neighborhood bias algorithm, we simply used the rand index and adjusted rand index to compare with out baseline and other algorithms. The algorithm came up with .886272 for the rand and 0.100829 for the adjusted rand index which is also significantly better than the baseline of 0.820231and 0.034969 respectively.\\
 
 \section{Conclusion}
-  The experimental data enabled us to determine the best matching parameter set for each algorithm. It was shown that the best algorithm in comparison to the baseline K-Means implementation was the Neighborhood bias with a final rand index of .886272. Close behind came the K-means implementation with the optimal weights discussed above, and a rand index score of 0.883907. These results showed the importance of understanding the individual spectral layers. Once the spectral layers were weighted optimally, the cluster accuracy resulting from a simple K-means method was greatly improved. The neighborhood bias method gave a slight boost to the K-means method’s results.\\
+  The Indian pines hyperspectral data was clustered to produce a Rand index of 0.886 as compared to the ground truth via our method combining band selection for dimensionality reduction, feature weighting, k-means clustering, and a new algorithm based spatial biasing. The development of this method grew out of a baseline implementation using just a k-means clustering, and through the iterations of the approach some key insights were made. Primarily, we found that PCA does not perform well in some cases compared to the simpler method of selecting individual wavelengths for dimensionality reduction. Furthermore, more complex clustering methods like DBSCAN were found to perform more poorly as compared to simple k-means. This, of course, is not a general result as k-means can often perform very poorly. However, this approach demonstrates that simpler clustering methods can still be superior depending on the data set. Finally, a spatial biasing algorithm was developed that modifies any arbitrary clustering output to account for the a pixels relationship with its spatial neighbors. In almost all cases, this biasing provided a modest gain in terms of the Rand and adjusted Rand index, and provided qualitatively better results that excluded spectral outliers.\\
 
 
 \ifCLASSOPTIONcaptionsoff

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.1.28)  5 MAY 2016 01:22
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.1.28)  5 MAY 2016 01:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -394,9 +394,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 101--102
 
  []
 
-Missing character: There is no â in font ptmr7t!
-Missing character: There is no € in font ptmr7t!
-Missing character: There is no ™ in font ptmr7t!
+
+Underfull \hbox (badness 6808) in paragraph at lines 104--105
+[]\OT1/ptm/m/n/10 The In-dian pines hy-per-spec-tral data was clus-tered
+ []
+
+
+Underfull \hbox (badness 1688) in paragraph at lines 104--105
+\OT1/ptm/m/n/10 ground truth via our method com-bin-ing band se-lec-tion
+ []
+
+
+Underfull \hbox (badness 1616) in paragraph at lines 104--105
+\OT1/ptm/m/n/10 for di-men-sion-al-ity re-duc-tion, fea-ture weight-ing, k-mean
+s
+ []
+
+
+Underfull \hbox (badness 2600) in paragraph at lines 104--105
+\OT1/ptm/m/n/10 clus-ter-ing, and a new al-go-rithm based spa-tial bi-as-ing.
+ []
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 104--105
 
@@ -480,7 +498,7 @@ texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/f
 onts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
 times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on project-2-jiqixuexitalnanle.pdf (3 pages, 3810468 bytes).
+Output written on project-2-jiqixuexitalnanle.pdf (3 pages, 3810952 bytes).
 PDF statistics:
  41 PDF objects out of 1000 (max. 8388607)
  22 compressed objects within 1 object stream
