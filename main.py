@@ -41,10 +41,7 @@ if __name__ == '__main__':
     plt.imshow(gt)
     plt.show()
 
-    fig2 = plt.figure()
-    plt.imshow(evo0)
-    plt.show()
-
+    # Visualize the clustering output
     fig3 = plt.figure()
     plt.imshow(evo1)
     plt.show()
