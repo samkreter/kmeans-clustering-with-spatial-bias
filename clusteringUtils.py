@@ -264,23 +264,18 @@ def scaleBands(data):
 	return data
 
 ##Best implementation of the Kmeans
-def kMeansMaxSpectralWeight():
-	cube = np.load("npIndian_pines.npy")
-	#data = ConvertDataCube(cube)
-	data = np.load("data.npy")
+def kMeansMaxSpectralWeight(cube,data,gt,key):
+
 	data = scaleBands(data)
-
-	gt = np.load("npIndian_pines_gt.npy")
-	key = ConvertGroundtruth(gt)
-
 	print("K-Meansing..")
 	k_means = KMeans(n_clusters=17,random_state=1)
 	k_means.fit(data)
 	labels = k_means.labels_
+	return labels
 
-	print("Calculating Rand Index..")
-	print(RandIndex(labels,key))
-	print(adjusted_rand_score(labels,key))
+	# print("Calculating Rand Index..")
+	# print(RandIndex(labels,key))
+	# print(adjusted_rand_score(labels,key))
 
 #####################################################
 		# DO IT
@@ -304,9 +299,6 @@ samps,features = data.shape
 dataSpectral = np.ones((samps,features-2))
 dataSpectral[:,:] = data[:,2:]
 
-# Data Scaling
-data = scaleBands(data)
-# data[2:] *= spectralScale
 
 # Load Ground Truth
 gt = np.load("npIndian_pines_gt.npy")
@@ -331,11 +323,6 @@ key = ConvertGroundtruth(gt)
 # plt.show()
 # input()
 
-# K Means
-print("K-Meansing..")
-k_means = KMeans(n_clusters=numClasses,random_state=1)
-k_means.fit(data)
-labels = k_means.labels_
 
 
 # DBSCAN
@@ -343,53 +330,3 @@ labels = k_means.labels_
 # DB = cluster.DBSCAN(eps=DB_eps,min_samples=numClasses)#,metric=WeightedAffinity)
 # DB.fit(dataPCA)
 # labels = DB.labels_
-
-# Neighborhood Biasing
-print("Doing Neighborhood Biasing..")
-evo0 = ConvertLabels(labels)
-evo1 = NeighborBias(evo0,numClasses,1)
-
-i=0
-for i in range(10):
-	evo2 = NeighborBias(evo1,numClasses,1)
-	if np.array_equal(evo1,evo2):
-		print("Converged!")
-	evo1 = evo2
-
-labels = ConvertGroundtruth(evo2)
-
-# Rand Index
-print("Calculating Rand Index..")
-print(RandIndex(labels,key))
-print(adjusted_rand_score(labels,key))
-
-# Visualize Ground Truth Prediction
-plt.ion()
-fig = plt.figure()
-plt.imshow(gt)
-plt.show()
-
-fig2 = plt.figure()
-plt.imshow(evo0)
-plt.show()
-
-fig3 = plt.figure()
-plt.imshow(evo1)
-plt.show()
-
-
-
-input()
-
-
-
-
-
-
-
-
-
-
-
-
-
