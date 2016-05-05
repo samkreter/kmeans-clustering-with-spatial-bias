@@ -284,16 +284,8 @@ def NeighborBias(sqrmap,maxClasses,radius):
 def scaleBands(data):
 	data[:,2:] /= 1000
 	data[:,167] *= 2000
-<<<<<<< HEAD
-	data[: , [0, 1]] *= 2 
-=======
+
 	data[: , [0, 1]] *= 2
-	#data[:,200] *= 100
-	data[:,120] *= 100
-	data[:,57] *= 100
-
-
->>>>>>> 613f30e8e060926f56c314378d588314ca1f0221
 	# data[:, [50, 110]] += 0
 	data[:,120] *= 100
 	data[:,57] *= 100
