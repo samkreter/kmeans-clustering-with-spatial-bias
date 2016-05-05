@@ -1,7 +1,6 @@
 import numpy as np
 import math
 import matplotlib.pyplot as plt
-import time
 import sklearn.metrics.pairwise as met
 from sklearn.decomposition import PCA
 from sklearn.cluster import KMeans
@@ -334,19 +333,10 @@ key = ConvertGroundtruth(gt)
 
 # K Means
 print("K-Meansing..")
-<<<<<<< HEAD
 k_means = KMeans(n_clusters=numClasses,random_state=1)
-=======
-k_means = KMeans(n_clusters=17,random_state=1)
->>>>>>> 613f30e8e060926f56c314378d588314ca1f0221
 k_means.fit(data)
 labels = k_means.labels_
 
-# Spectral Clustering (rbf) DONT DO IT TAKES TOO LONG AND CRASHES
-# print("Doing Spectral Clustering..")
-# spectral = cluster.SpectralClustering(n_clusters=17)
-# spectral.fit(dataPCA)
-# labels = spectral.labels_
 
 # DBSCAN
 # print("Doing DBSCAN..")
@@ -388,35 +378,10 @@ plt.imshow(evo1)
 plt.show()
 
 
-#Testing stuff
-# a = np.array([1,2,3,4])
-# b = np.array([5,4,3,2])
-# print(sum((-b[:2]+a[:2])**2))
-
-
 
 input()
 
 
-# start = time.time()
-
-#a = np.random.rand(1000,256)
-#print( WeightedDist_Arith(data,12,13,SpatialDistanceEuclidean,0,SpectralDistanceL2,1) )
-#dists = met.pairwise_distances(a,n_jobs=-1)
-
-# end = time.time()
-#print("Time:"+str(end-start))
-
-# xsize,ysize,depth = cube.shape
-# refl = np.zeros((xsize,ysize))
-# for i in range(xsize):
-# 	for j in range(ysize):
-# 		for k in range(depth):
-# 			refl[i][j]+=cube[i][j][k]
-# reflim = plt.figure()
-# plt.imshow(refl)
-
-# View(cube,gt)
 
 
 
