@@ -1,5 +1,5 @@
-Testing
---------
+Spectral Weighting and Spatial Biasing for Hyperspectral K-Means Clustering
+---------------------------------------------------------------------------
 
 ##Dependencies
 
