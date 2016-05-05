@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.1.28)  5 MAY 2016 01:52
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.1.28)  5 MAY 2016 02:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -363,23 +363,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 89--90
 
  []
 
-<images/parameters.png, id=16, 732.7375pt x 140.525pt>
-File: images/parameters.png Graphic file (type png)
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ™ in font ptmr7t!
 
-<use images/parameters.png>
-Package pdftex.def Info: images/parameters.png used on input line 92.
-(pdftex.def)             Requested size: 252.0pt x 48.32678pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 97--98
+Underfull \hbox (badness 10000) in paragraph at lines 91--92
 
  []
 
 [2 <./images/allStarSpec.png> <./images/horribleSpec.png> <./images/BandUnB.png
->]
+>] <images/parameters.png, id=22, 732.7375pt x 140.525pt>
+File: images/parameters.png Graphic file (type png)
+
+<use images/parameters.png>
+Package pdftex.def Info: images/parameters.png used on input line 94.
+(pdftex.def)             Requested size: 252.0pt x 48.32678pt.
+
 Underfull \hbox (badness 10000) in paragraph at lines 99--100
 
  []
@@ -390,91 +389,106 @@ Underfull \hbox (badness 10000) in paragraph at lines 101--102
  []
 
 
-Underfull \hbox (badness 6808) in paragraph at lines 104--105
+Underfull \hbox (badness 10000) in paragraph at lines 103--104
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 105--106
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 107--108
+
+ []
+
+
+Underfull \hbox (badness 6808) in paragraph at lines 110--111
 []\OT1/ptm/m/n/10 The In-dian pines hy-per-spec-tral data was clus-tered
  []
 
 
-Underfull \hbox (badness 1688) in paragraph at lines 104--105
+Underfull \hbox (badness 1688) in paragraph at lines 110--111
 \OT1/ptm/m/n/10 ground truth via our method com-bin-ing band se-lec-tion
  []
 
 
-Underfull \hbox (badness 1616) in paragraph at lines 104--105
+Underfull \hbox (badness 1616) in paragraph at lines 110--111
 \OT1/ptm/m/n/10 for di-men-sion-al-ity re-duc-tion, fea-ture weight-ing, k-mean
 s
  []
 
 
-Underfull \hbox (badness 2600) in paragraph at lines 104--105
+Underfull \hbox (badness 2600) in paragraph at lines 110--111
 \OT1/ptm/m/n/10 clus-ter-ing, and a new al-go-rithm based spa-tial bi-as-ing.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 104--105
+Underfull \hbox (badness 10000) in paragraph at lines 110--111
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 120--121
+Underfull \hbox (badness 10000) in paragraph at lines 126--127
 []\OT1/ptm/m/n/8 Blondel, Math-ieu. \OT1/ptm/m/it/8 Fuzzy K-means and K-medians
 .
  []
 
 
-Underfull \hbox (badness 3029) in paragraph at lines 120--121
+Underfull \hbox (badness 3029) in paragraph at lines 126--127
 \OT1/ptm/m/n/8 https://gist.github.com/mblondel/1451300. N.p., 2011. Web. 4 May
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 126--127
+Underfull \hbox (badness 10000) in paragraph at lines 132--133
 []\OT1/ptm/m/n/8 Francis, Louise. \OT1/ptm/m/it/8 Ap-pli-ca-tions of Un-su-per-
 vised Learn-ing in
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 126--127
+Underfull \hbox (badness 10000) in paragraph at lines 132--133
 \OT1/ptm/m/it/8 Prop-erty and Ca-su-alty In-sur-ance with Em-pha-sis on Fraud
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 126--127
+Underfull \hbox (badness 10000) in paragraph at lines 132--133
 \OT1/ptm/m/it/8 Anal-y-sis \OT1/ptm/m/n/8 http://www.slideshare.net/salfordsyst
 ems/final-applications-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 129--130
+Underfull \hbox (badness 10000) in paragraph at lines 135--136
 []\OT1/ptm/m/n/8 Matteo, Mat-teucci. \OT1/ptm/m/it/8 A Tu-to-rial on Clus-ter-i
 ng Al-go-rithms.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 129--130
+Underfull \hbox (badness 10000) in paragraph at lines 135--136
 \OT1/ptm/m/n/8 http://home.deib.polimi.it/matteucc/Clustering/tutorial[]html/. 
 N.p.,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 132--133
+Underfull \hbox (badness 10000) in paragraph at lines 138--139
 []\OT1/ptm/m/n/8 Purdue Re-search Foun-da-tion. \OT1/ptm/m/it/8 Hy-per-spec-tra
 l Re-mote Sens-ing
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 132--133
+Underfull \hbox (badness 10000) in paragraph at lines 138--139
 \OT1/ptm/m/it/8 Scenes. \OT1/ptm/m/n/8 http://www.ehu.eus/ccwintco/index.php?ti
 tle=Hyperspectral
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 135--136
+Underfull \hbox (badness 10000) in paragraph at lines 141--142
 []\OT1/ptm/m/n/8 Zhang, Han-tao. \OT1/ptm/m/it/8 Un-su-per-vised Learn-ing.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 135--136
+Underfull \hbox (badness 10000) in paragraph at lines 141--142
 \OT1/ptm/m/n/8 http://homepage.cs.uiowa.edu/[]hzhang/c145/notes/chap18b.pdf. N.
 p.,
  []
@@ -483,7 +497,7 @@ p.,
 Here is how much of TeX's memory you used:
  3430 strings out of 495028
  58298 string characters out of 6181497
- 119602 words of memory out of 5000000
+ 120602 words of memory out of 5000000
  6628 multiletter control sequences out of 15000+600000
  37366 words of font info for 67 fonts, out of 8000000 for 9000
  17 hyphenation exceptions out of 8191
@@ -493,7 +507,7 @@ texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/f
 onts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
 times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on project-2-jiqixuexitalnanle.pdf (3 pages, 3810892 bytes).
+Output written on project-2-jiqixuexitalnanle.pdf (3 pages, 3812333 bytes).
 PDF statistics:
  41 PDF objects out of 1000 (max. 8388607)
  22 compressed objects within 1 object stream
