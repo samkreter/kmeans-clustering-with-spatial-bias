@@ -1,7 +1,6 @@
 import numpy as np
 import math
 import matplotlib.pyplot as plt
-import time
 import sklearn.metrics.pairwise as met
 from sklearn.decomposition import PCA
 from sklearn.cluster import KMeans
@@ -59,33 +58,6 @@ def ConvertLabels(labels):
 
 	return  gt
 
-# Computes the rand index of two sets of classes, also apparently found in scikit
-def RandIndex(classes,key): # Should be 1D arrays of equal length. The values in the array should be classes
-
-	# https://en.wikipedia.org/wiki/Rand_index
-
-	samples=len(classes)
-	a=0
-	b=0
-	c=0
-	d=0
-
-	# Go through all pairs of data points
-	for i in range(samples):
-		for j in range(i,samples):
-
-			if(classes[i] == classes[j]):
-				if(key[i] == key[j] ):
-					a += 1
-				else:
-					c += 1
-			else:
-				if(key[i] == key[j] ):
-					d += 1
-				else:
-					b += 1
-
-	return (a+b)/(a+b+c+d)
 
 # Computes the physical distance between the i'th and j'th data point
 def SpatialDistanceEuclidean(data,i,j):
@@ -284,39 +256,26 @@ def NeighborBias(sqrmap,maxClasses,radius):
 def scaleBands(data):
 	data[:,2:] /= 1000
 	data[:,167] *= 2000
-<<<<<<< HEAD
-	data[: , [0, 1]] *= 2 
-=======
+
 	data[: , [0, 1]] *= 2
-	#data[:,200] *= 100
-	data[:,120] *= 100
-	data[:,57] *= 100
-
-
->>>>>>> 613f30e8e060926f56c314378d588314ca1f0221
 	# data[:, [50, 110]] += 0
 	data[:,120] *= 100
 	data[:,57] *= 100
 	return data
 
 ##Best implementation of the Kmeans
-def kMeansMaxSpectralWeight():
-	cube = np.load("npIndian_pines.npy")
-	#data = ConvertDataCube(cube)
-	data = np.load("data.npy")
+def kMeansMaxSpectralWeight(cube,data,gt,key):
+
 	data = scaleBands(data)
-
-	gt = np.load("npIndian_pines_gt.npy")
-	key = ConvertGroundtruth(gt)
-
 	print("K-Meansing..")
 	k_means = KMeans(n_clusters=17,random_state=1)
 	k_means.fit(data)
 	labels = k_means.labels_
+	return labels
 
-	print("Calculating Rand Index..")
-	print(RandIndex(labels,key))
-	print(adjusted_rand_score(labels,key))
+	# print("Calculating Rand Index..")
+	# print(RandIndex(labels,key))
+	# print(adjusted_rand_score(labels,key))
 
 #####################################################
 		# DO IT
@@ -340,9 +299,6 @@ samps,features = data.shape
 dataSpectral = np.ones((samps,features-2))
 dataSpectral[:,:] = data[:,2:]
 
-# Data Scaling
-data = scaleBands(data)
-# data[2:] *= spectralScale
 
 # Load Ground Truth
 gt = np.load("npIndian_pines_gt.npy")
@@ -367,99 +323,10 @@ key = ConvertGroundtruth(gt)
 # plt.show()
 # input()
 
-# K Means
-print("K-Meansing..")
-<<<<<<< HEAD
-k_means = KMeans(n_clusters=numClasses,random_state=1)
-=======
-k_means = KMeans(n_clusters=17,random_state=1)
->>>>>>> 613f30e8e060926f56c314378d588314ca1f0221
-k_means.fit(data)
-labels = k_means.labels_
 
-# Spectral Clustering (rbf) DONT DO IT TAKES TOO LONG AND CRASHES
-# print("Doing Spectral Clustering..")
-# spectral = cluster.SpectralClustering(n_clusters=17)
-# spectral.fit(dataPCA)
-# labels = spectral.labels_
 
 # DBSCAN
 # print("Doing DBSCAN..")
 # DB = cluster.DBSCAN(eps=DB_eps,min_samples=numClasses)#,metric=WeightedAffinity)
 # DB.fit(dataPCA)
 # labels = DB.labels_
-
-# Neighborhood Biasing
-print("Doing Neighborhood Biasing..")
-evo0 = ConvertLabels(labels)
-evo1 = NeighborBias(evo0,numClasses,1)
-
-i=0
-for i in range(10):
-	evo2 = NeighborBias(evo1,numClasses,1)
-	if np.array_equal(evo1,evo2):
-		print("Converged!")
-	evo1 = evo2
-
-labels = ConvertGroundtruth(evo2)
-
-# Rand Index
-print("Calculating Rand Index..")
-print(RandIndex(labels,key))
-print(adjusted_rand_score(labels,key))
-
-# Visualize Ground Truth Prediction
-plt.ion()
-fig = plt.figure()
-plt.imshow(gt)
-plt.show()
-
-fig2 = plt.figure()
-plt.imshow(evo0)
-plt.show()
-
-fig3 = plt.figure()
-plt.imshow(evo1)
-plt.show()
-
-
-#Testing stuff
-# a = np.array([1,2,3,4])
-# b = np.array([5,4,3,2])
-# print(sum((-b[:2]+a[:2])**2))
-
-
-
-input()
-
-
-# start = time.time()
-
-#a = np.random.rand(1000,256)
-#print( WeightedDist_Arith(data,12,13,SpatialDistanceEuclidean,0,SpectralDistanceL2,1) )
-#dists = met.pairwise_distances(a,n_jobs=-1)
-
-# end = time.time()
-#print("Time:"+str(end-start))
-
-# xsize,ysize,depth = cube.shape
-# refl = np.zeros((xsize,ysize))
-# for i in range(xsize):
-# 	for j in range(ysize):
-# 		for k in range(depth):
-# 			refl[i][j]+=cube[i][j][k]
-# reflim = plt.figure()
-# plt.imshow(refl)
-
-# View(cube,gt)
-
-
-
-
-
-
-
-
-
-
-
